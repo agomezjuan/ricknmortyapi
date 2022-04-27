@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #0e2d3d;
   color: #3c484e;
   font-family: 'Open Sans', sans-serif;
 }
@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
 }
 
 .Header a {
@@ -19,11 +20,16 @@ body {
   color: #15302C;
 }
 
+.Header img {
+  width: 200px;
+}
+
 .Main {
   padding: 10px;
   grid-template-columns: minmax(auto, 976px);
   display: grid;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .Characters {
@@ -48,6 +54,8 @@ body {
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  animation: transform;
+  background-color: aliceblue;
 }
 
 .Characters-card img {
@@ -71,13 +79,21 @@ body {
 
 .Characters-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  box-shadow: 8px 14px 38px rgba(39,44,49,.1), 1px 3px 8px rgba(39,44,49,.1);
   border-radius: 5px;
   margin: 0 0 20px 0;
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  background-color: aliceblue;
+  transition: box-shadow, transform 0.5s ease-out;
 }
+
+.Characters-item:hover {
+  transform: translateY(-3px);
+  transition: box-shadow, transform 0.5s ease-out;
+}
+
 
 .Characters-item img {
   width: 100%;
@@ -90,7 +106,7 @@ body {
   font-weight: 300;
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .Characters-item a {

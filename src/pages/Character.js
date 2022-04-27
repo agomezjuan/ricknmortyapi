@@ -1,10 +1,10 @@
-import getHash from '../utils/getHash';
-import getData from '../utils/getData';
+import getHash from "../utils/getHash";
+import { getData } from "../utils/getData";
 
 const Character = async () => {
-    const id = getHash();
-    const character = await getData(id);
-    const view = `
+  const id = getHash();
+  const character = await getData(id);
+  const view = `
         <div class="Characters-inner">
             <article class="Characters-card">
                 <img src="${character.image}" alt="${character.name}">
@@ -20,7 +20,7 @@ const Character = async () => {
             </article>
         </div>
     `;
-    return view;
+  return view;
 };
 
 export default Character;
